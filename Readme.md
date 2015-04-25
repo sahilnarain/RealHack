@@ -17,4 +17,3 @@
 # MEAN stack with a socket implementation using SailsJS is used for the implementation of logic.Docker is used for demo/deployment.
 # Interaction between the Android application and other components is to be done through web service responses. This integration is managed through the Android application.
 # Focus would also lie on algorithms to present a feasible recommendation to the user.
-
