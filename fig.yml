@@ -6,3 +6,5 @@ web:
     ports:
         - "1337:1337"
 
+mongo:
+    build: mongo
