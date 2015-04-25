@@ -6,7 +6,7 @@ RUN npm update
 
 RUN npm -g install sails
 
-ADD ./code
+ADD ./code /code
 
 WORKDIR /code
 
