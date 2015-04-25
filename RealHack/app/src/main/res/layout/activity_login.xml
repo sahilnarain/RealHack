@@ -25,6 +25,15 @@
         android:gravity="center"
         android:inputType="textPassword"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvInvalidCredentials"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"
+        android:textColor="#FF0000"
+        android:text="Incorrect username or password"/>
+
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
