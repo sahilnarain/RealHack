@@ -11,9 +11,12 @@ angular.module('SignupModule').controller('SignupController', ['$scope', '$http'
     }).then(function onSuccess(){
         window.location = '/user';
     }).catch(function onError(sailsResponse){
-        console.log(sailsResponse);
+        if(sailsResponse.status == 409) {
+            toaster.error('That email address has already been taken, please try again.', 'Error');
+            return;
+        }
     }).finally(function eitherWay(){
-        $scope.signupForm.location = false
+        $scope.signupForm.loading = false
     })
   }
 }]);

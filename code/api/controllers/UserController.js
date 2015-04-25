@@ -34,7 +34,10 @@ module.exports = {
                             lastLoggedIn: new Date()
                         }),
                         function userCreated(err, newUser) {
-                          if err{
+                          if(err){
+                              if(err.invalidAttributes && err.invalidAttributes.email && err.invalidAttributes.email[0] && err.invalidAttributes.email[0].rule == 'unique') {
+                                  return res.emailAddressInUse();
+                              }
                               return res.negotiate(err)
                           }
                           return res.json({
