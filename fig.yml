@@ -1,0 +1,15 @@
+web:
+    build: .
+    command: python app.py
+    links:
+        - dpd
+    ports:
+        - "8000:8000"
+
+dpd:
+    build: japanvik/deployd
+    links:
+        - mongo
+
+mongo:
+    build: mongo
