@@ -5,7 +5,7 @@ angular.module('SignupModule').controller('SignupController', ['$scope', '$http'
 
     $http.post('/signup', {
         name: $scope.signupForm.name,
-        title: $scope.signuoForm.title,
+        title: $scope.signupForm.title,
         email: $scope.signupForm.email,
         password: $scope.signupForm.password
     }).then(function onSuccess(){
