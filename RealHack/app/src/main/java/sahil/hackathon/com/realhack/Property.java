@@ -1,9 +1,12 @@
 package sahil.hackathon.com.realhack;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewCompat;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 /**
  * Created by sahil on 25/4/15.
@@ -13,6 +16,11 @@ public class Property extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_property);
+    }
+
+    public void comparisonCart(View view) {
+        Intent intent = new Intent("android.intent.action.COMPARE");
+        startActivity(intent);
     }
 
     @Override
