@@ -15,6 +15,7 @@ angular.module('SignupModule').controller('SignupController', ['$scope', '$http'
             toaster.error('That email address has already been taken, please try again.', 'Error');
             return;
         }
+        else { console.log(sailsResponse) }
     }).finally(function eitherWay(){
         $scope.signupForm.loading = false
     })

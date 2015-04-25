@@ -32,7 +32,10 @@ var jsFilesToInject = [
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
+  
   'js/public/**/*Module.js',
+  'js/private/**/*Module.js',
+  'js/private/**/*Controller.js',
   'js/public/**/*Controller.js',
   'js/**/*.js'
 ];
