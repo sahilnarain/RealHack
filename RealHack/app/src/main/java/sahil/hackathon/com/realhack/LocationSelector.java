@@ -1,9 +1,11 @@
 package sahil.hackathon.com.realhack;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 /**
  * Created by sahil on 25/4/15.
@@ -14,6 +16,15 @@ public class LocationSelector extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_selector);
+    }
+
+    public void viewProperties(View view) {
+        try {
+            Intent intent = new Intent("android.intent.action.PROPERTYLIST");
+            startActivity(intent);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

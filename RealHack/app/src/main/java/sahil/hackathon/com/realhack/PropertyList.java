@@ -1,9 +1,11 @@
 package sahil.hackathon.com.realhack;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 /**
  * Created by sahil on 25/4/15.
@@ -13,6 +15,11 @@ public class PropertyList extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_property_list);
+    }
+
+    public void showProperty(View view) {
+        Intent intent = new Intent("android.intent.action.PROPERTY");
+        startActivity(intent);
     }
 
     @Override
